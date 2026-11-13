@@ -11,6 +11,10 @@ const products = [
   {id:"keke-pina",name:"Keke de piña",category:"kekes",tag:"Frutal",quoteOnly:true,quoteLabel:"Consultar precio",description:"Keke de piña con un toque dulce y frutal.",image:"keke-pina.jpg",alt:"Keke de piña",position:"50% 50%"},
 ];
 products.push(...tortaProducts,...bocaditosProducts,...postresProducts);
+const whatsappNumber = "51962200300";
+function whatsappUrl(message="") {
+  return `https://wa.me/${whatsappNumber}${message ? `?text=${encodeURIComponent(message)}` : ""}`;
+}
 const money = value => new Intl.NumberFormat("es-PE", {maximumFractionDigits:0}).format(value);
 const categoryNames = {tortas:"Tortas",postres:"Postres",bocaditos:"Bocaditos","bocaditos-tematicos":"Bocaditos temáticos",kekes:"Kekes"};
 const categoryDescriptions = {todos:"Encuentra ese saborcito perfecto para compartir… o para ti.",tortas:"Elige el acabado perfecto para tu celebración.",postres:"Un antojo dulce para disfrutar a cualquier hora.",bocaditos:"Pequeños favoritos para compartir en cada reunión.","bocaditos-tematicos":"Detalles dulces para celebrar a tu manera.",kekes:"Recetas caseras para acompañar tus mejores momentos."};
@@ -78,7 +82,7 @@ function quoteUrl(product) {
       : product.category==="kekes"
         ? `Hola, Dulce Bella. Quisiera consultar precio y disponibilidad de ${product.name}. ¿Me indican las opciones de medio kilo y un kilo?`
         : `Hola, Dulce Bella. Quisiera consultar precio y disponibilidad de ${product.name}. ¿Me comparten las presentaciones?`;
-  return `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+  return whatsappUrl(message);
 }
 function renderProducts() {
   const query = search.value.trim().toLocaleLowerCase("es");
@@ -127,7 +131,7 @@ function renderCart() {
     return `• ${p.name} — ${item.size} — ${item.quantity} x S/ ${money(item.price)}`;
   }).join("\n");
   const message=`Hola, Dulce Bella. Quisiera consultar disponibilidad para este pedido:\n${summary}\nTotal: S/ ${money(total)}. ¿Me confirman fecha de entrega?`;
-  document.querySelector(".button-whatsapp").href=`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+  document.querySelector(".button-whatsapp").href=whatsappUrl(message);
 }
 function openCart() { cartDrawer.classList.add("is-open"); cartDrawer.setAttribute("aria-hidden","false"); backdrop.hidden=false; document.body.style.overflow="hidden"; cartDrawer.querySelector(".drawer-close").focus(); }
 function closeCart() { cartDrawer.classList.remove("is-open"); cartDrawer.setAttribute("aria-hidden","true"); backdrop.hidden=true; document.body.style.overflow=""; document.querySelector(".cart-trigger").focus(); }

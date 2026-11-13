@@ -1,0 +1,130 @@
+[
+  {
+    "file": "assets/strawberry-cake.jpg",
+    "photo": "photo-1561924607-7e9b21fb51ec",
+    "photographer": "Monika Grabkowska",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/pink-cake.jpg",
+    "photo": "photo-1677840147140-252adb9ca347",
+    "photographer": "Joshua Glass",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/chocolate-cake.jpg",
+    "photo": "photo-1578985545062-69928b1d9587",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/vanilla-cake.jpg",
+    "photo": "photo-1565958011703-44f9829ba187",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/pink-cupcakes.jpg",
+    "photo": "photo-1555420460-5551f716b44c",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/chocolate-cupcakes.jpg",
+    "photo": "photo-1573050435329-27ff3181380c",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/fruit-tarts.jpg",
+    "photo": "photo-1741873826250-c24363f8290e",
+    "photographer": "Ivan Aviles",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/brownies.jpg",
+    "photo": "photo-1606313564200-e75d5e30476c",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "file": "assets/dessert-spread.jpg",
+    "photo": "photo-1670819916757-e8d5935a6c65",
+    "photographer": "No verificado",
+    "license": "Unsplash License",
+    "creditRequired": false,
+    "source": "https://unsplash.com/license"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/keke-red-velvet.jpg",
+    "source": "https://unsplash.com/photos/heart-shaped-red-velvet-cake-with-cream-cheese-frosting-pjK-6BCDBZI",
+    "photographer": "Paras Kapoor",
+    "creditRequired": false,
+    "photo": "photo-1771129859451-26dd3fa2e757"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/keke-pina.jpg",
+    "source": "https://unsplash.com/photos/a-cake-sitting-on-top-of-a-table-next-to-a-pineapple-XRLsjWm_Jpc",
+    "photographer": "Fatane Rahimi",
+    "creditRequired": false,
+    "photo": "photo-1687975091176-5a28a9860907"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/keke-naranja.jpg",
+    "source": "https://unsplash.com/photos/a-small-cake-with-cream-and-orange-slice-Vnw2S0Fz0EY",
+    "photographer": "Musa Javed",
+    "creditRequired": false,
+    "photo": "photo-1760088256137-97c71edaa281"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/keke-infantil.jpg",
+    "source": "https://unsplash.com/photos/round-fruitcake-decorated-with-assorted-nuts-on-top-3sof0Vz5nkw",
+    "photographer": "Brett Jordan",
+    "creditRequired": false,
+    "photo": "photo-1776268927313-cfe013018850"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/keke-vainilla.jpg",
+    "source": "https://unsplash.com/photos/a-vanilla-cake-with-raspberries-and-vanilla-extract-hFG62li_6vc",
+    "photographer": "Foodie Flavours",
+    "creditRequired": false,
+    "photo": "photo-1770377245252-eee99d2a4c74"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/torta-tematica.jpg",
+    "source": "https://unsplash.com/photos/aZp6Gya7pUQ",
+    "photographer": "Karina Kungla",
+    "creditRequired": false,
+    "photo": "photo-1695275673485-8d3ef4965615"
+  },
+  {
+    "license": "Unsplash License",
+    "file": "assets/bocaditos-salados.jpg",
+    "source": "https://unsplash.com/photos/a-golden-empanada-sits-on-a-white-plate-with-sauce-gd54Nf3We7k",
+    "photographer": "Rafael Rodrigues",
+    "creditRequired": false,
+    "photo": "photo-1773831061318-490f04ee6e07"
+  }
+]

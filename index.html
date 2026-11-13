@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5d9d5">
+  <meta name="description" content="Tortas, kekes y postres caseros para celebrar los momentos bonitos. Descubre el catálogo de Dulce Bella.">
+  <title>Dulce Bella — Un gustito feliz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="tortas-catalog.js" defer></script>
+  <script src="bocaditos-catalog.js" defer></script>
+  <script src="postres-catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ribbon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Dulce Bella, inicio">
+      <img src="assets/logo-dulce-bella.png" alt="Logo de Dulce Bella">
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personalizados">A tu gusto</a>
+      <a href="#nosotros">Nuestra cocina</a>
+    </nav>
+    <button class="cart-trigger" type="button" aria-label="Abrir carrito">
+      <span>Mi pedido</span><span class="cart-count" aria-live="polite">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-paper">
+        <div class="hero-stripe" aria-hidden="true"></div>
+        <div class="hero-content">
+          <img class="hero-logo" src="assets/logo-dulce-bella.png" alt="Dulce Bella, un gustito feliz">
+          <h1 id="hero-title">Un gustito<br>feliz</h1>
+          <p>Tortas y pequeños antojos hechos con cariño para celebrar a tu manera.</p>
+          <a class="button button-dark" href="#catalogo">Explorar el catálogo <span aria-hidden="true">↗</span></a>
+          <div class="hero-links"><a href="#catalogo">Tortas</a><a href="#catalogo" data-jump-category="kekes">Kekes</a><a href="#personalizados">Pedidos a tu gusto</a></div>
+        </div>
+      </div>
+      <figure class="hero-image">
+        <img src="assets/pink-cake.jpg" alt="Torta de crema rosada con fresas frescas" width="1200" height="1600" fetchpriority="high">
+        <figcaption>Un detalle dulce para celebrar bonito.</figcaption>
+        <div class="hero-stamp" aria-hidden="true"><span>hecho</span><strong>con<br>cariño</strong></div>
+      </figure>
+    </section>
+
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-head">
+        <div><h2 id="catalog-title">Elige tu antojo</h2></div>
+        <p id="catalog-description">Encuentra ese saborcito perfecto para compartir… o para ti.</p>
+      </div>
+      <div class="catalog-tools">
+        <div class="category-tabs" role="group" aria-label="Filtrar por categoría">
+          <button class="category-tab is-active" data-category="todos" type="button" aria-pressed="true">Todo</button>
+          <button class="category-tab" data-category="tortas" type="button" aria-pressed="false">Tortas</button>
+          <button class="category-tab" data-category="postres" type="button" aria-pressed="false">Postres</button>
+          <button class="category-tab" data-category="bocaditos" type="button" aria-pressed="false">Bocaditos</button>
+          <button class="category-tab" data-category="bocaditos-tematicos" type="button" aria-pressed="false">Bocaditos temáticos</button>
+          <button class="category-tab" data-category="kekes" type="button" aria-pressed="false">Kekes</button>
+        </div>
+        <div class="subcategory-tabs" id="subcategory-tabs" role="group" aria-label="Filtrar por tipo" hidden></div>
+        <div class="catalog-controls">
+          <label class="search-box"><span class="sr-only">Buscar en el catálogo</span><input id="catalog-search" type="search" placeholder="Buscar un sabor…"><span aria-hidden="true">⌕</span></label>
+          <label class="sort-control" for="sort-products"><span>Ordenar por</span><select id="sort-products"><option value="featured">Más queridos</option><option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option></select></label>
+        </div>
+      </div>
+      <div class="catalog-layout">
+        <aside class="catalog-aside">
+          <p>Algo para cada momento</p>
+          <div class="aside-card"><img src="assets/chocolate-cake.jpg" alt="Torta de chocolate con crema y ganache" width="1200" height="800" loading="lazy"><span>Un poquito de cacao,<br>mucho amor.</span></div>
+        </aside>
+        <div class="catalog-results">
+          <p class="promotion-banner" id="promotion-banner" hidden></p>
+          <div class="results-line"><div><p id="result-count" aria-live="polite">Nuestros favoritos</p><small class="photo-note">Fotos propias de tortas, kekes y bocaditos; algunos modelos son referenciales.</small></div><button class="clear-filters" type="button">Ver todo el catálogo</button></div>
+          <div class="product-grid" id="product-grid"></div>
+          <p class="empty-results" hidden>No encontramos ese antojito. Prueba con otro sabor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="personalized-section" id="personalizados" aria-labelledby="custom-title">
+      <figure class="custom-art"><img src="assets/strawberry-cake.jpg" alt="Torta casera de fresas y crema preparada para compartir" width="1200" height="1600" loading="lazy"></figure>
+      <div class="custom-copy"><h2 id="custom-title">Tu torta,<br>a tu manera</h2><p>Cuéntanos la ocasión, los sabores que te gustan y los colores que imaginas. Juntas le damos forma a una torta muy tuya.</p><a class="button button-light" href="#pedido">Cuéntanos tu idea <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="story-section" id="nosotros" aria-labelledby="story-title">
+      <div class="story-image"><img src="assets/pink-cupcakes.jpg" alt="Cupcakes con cobertura blanca y lluvia de colores" width="1200" height="800" loading="lazy"><p>El cariño también está en los ingredientes.</p></div>
+      <div class="story-copy"><h2 id="story-title">Hecho en casa<br>con cariño</h2><p>En Dulce Bella creemos que un postre puede hacer especial cualquier día. Preparamos cada pedido con dedicación y ese toque dulce que invita a celebrar.</p><div class="story-details"><span>Sabores que abrazan</span><span>Detalles que cuentan</span><span>Momentos para recordar</span></div></div>
+    </section>
+
+    <section class="order-section" id="pedido" aria-labelledby="order-title">
+      <div class="order-paper"><div class="order-stripe" aria-hidden="true"></div><div><h2 id="order-title">¿Qué se te antoja?</h2><p>Arma tu pedido en el catálogo y compártelo para consultar disponibilidad y entrega.</p><button class="button button-dark" type="button" data-open-cart>Ver mi pedido <span aria-hidden="true">↗</span></button></div><img class="order-berry" src="assets/fruit-tarts.jpg" alt="Tartaletas de frutos rojos" width="1200" height="1600" loading="lazy"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-stripe" aria-hidden="true"></div><div class="footer-main"><img src="assets/logo-dulce-bella.png" alt="Dulce Bella"><p>Un gustito feliz,<br>para tus días bonitos.</p><nav aria-label="Enlaces al pie"><a href="#catalogo">Catálogo</a><a href="#personalizados">Pedidos a tu gusto</a><a href="#inicio">Volver arriba ↑</a></nav><small>© <span id="year"></span> Dulce Bella</small></div>
+    <div class="footer-location">
+      <span class="footer-location-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M19 10c0 5.1-7 11-7 11S5 15.1 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+      </span>
+      <div class="footer-location-copy">
+        <span class="footer-location-label">Visítanos</span>
+        <address>Calle Lima 357 · Parcona, Ica<span>A dos cuadras de la municipalidad</span></address>
+      </div>
+      <a class="footer-map-link" href="https://maps.app.goo.gl/refdSU9VdVViHSTA6" target="_blank" rel="noopener noreferrer">Ver ubicación en Maps <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+
+  <div class="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="drawer-head"><div><h2 id="cart-title">Mi pedido <span class="drawer-count">(0)</span></h2></div><button class="drawer-close" type="button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items"></div><div class="cart-empty"><p>Tu pedido empieza con un antojito.</p><button class="button button-dark" type="button" data-close-cart>Volver al catálogo</button></div>
+    <div class="cart-summary" hidden><p><span>Subtotal</span><strong>S/ <span class="cart-total">0</span></strong></p><small>Confirma disponibilidad y fecha de entrega al hacer tu pedido.</small><a class="button button-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send">Compartir pedido por WhatsApp <span aria-hidden="true">↗</span></a></div>
+  </aside>
+  <dialog class="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Cerrar detalle">×</button><div class="dialog-art"></div><div class="dialog-copy"><h2 id="dialog-title"></h2><p class="dialog-description"></p><label id="product-option-label" for="product-size">Presentación</label><select id="product-size"></select><p class="dialog-price"></p><button class="button button-dark dialog-add" type="button">Agregar al pedido <span aria-hidden="true">↗</span></button></div></dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
